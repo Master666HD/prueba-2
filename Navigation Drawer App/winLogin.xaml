@@ -1,0 +1,53 @@
+﻿<Window x:Class="Navigation_Drawer_App.winLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Navigation_Drawer_App"
+        mc:Ignorable="d"
+        Title="winLogin" Height="450" Width="420"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    
+    <Grid>
+        <StackPanel>
+            <Grid Height="30" Background="DarkBlue">
+            </Grid>
+            <materialDesign:ColorZone Height="150" Background="DarkBlue">
+                <Label Content="Bienvenido" VerticalAlignment="Center" Foreground="White" FontSize="36" Margin="0 10 0 0" FontWeight="Bold"/>
+            </materialDesign:ColorZone>
+
+            <StackPanel Orientation="Horizontal"  Margin="10" >
+                <materialDesign:PackIcon Kind="User" Width="35" Height="35" Foreground="Green"/>
+                <TextBox x:Name="txtNombreUsuario" Width="320" Margin="5" materialDesign:HintAssist.Hint="Nombre de Usuario" materialDesign:HintAssist.IsFloating="True"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"  Margin="10" >
+                <materialDesign:PackIcon Kind="Key" Width="35" Height="35" Foreground="Green"/>
+                <PasswordBox x:Name="txtContraseña" Width="320" Margin="5" materialDesign:HintAssist.Hint="Ingrese Contraseña" materialDesign:HintAssist.IsFloating="True"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"  Margin="20" HorizontalAlignment="Right" >
+                <Button x:Name="btnIngresar" Content="Ingresar" Margin="10 0 10 0" Width="120" Click="btnIngresar_Click"  />
+                <Button x:Name="btnSalir" Content="Salir"    Margin="10 0 10 0" Width="120" Click="btnSalir_Click" />
+            </StackPanel>
+
+            <materialDesign:Card Height="50" >
+                <Label x:Name="lblInfo" Content="Por seguridad jamas revele su contraseña" Foreground="DarkGray" FontSize="20"/>
+            </materialDesign:Card>
+
+        </StackPanel>
+       
+       
+   
+    </Grid>
+</Window>
